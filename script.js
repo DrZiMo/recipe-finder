@@ -40,7 +40,7 @@ function createRecipe(poster, catagory, name, tags, videoLink) {
     recipe.append(infoPart);
 
     const recipeCatagory = document.createElement("div");
-    recipeCatagory.classList.add("recipe-catagory", "bg-gray-400", "text-gray-700", "w-fit", "px-3", "py-1", "rounded-full");
+    recipeCatagory.classList.add("recipe-catagory", "bg-gray-300", "text-gray-700", "w-fit", "px-3", "py-1", "rounded-full");
     recipeCatagory.textContent = catagory;
     infoPart.append(recipeCatagory);
 
