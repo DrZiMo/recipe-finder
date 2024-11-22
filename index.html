@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/f900e39f72.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <title>Recipe Finder</title>
+</head>
+
+<body>
+    <div class="container w-[80%] mx-auto my-10">
+        <div class="title text-5xl font-bold text-center text-[#e85d04]">Recipe Finder</div>
+        <div class="search border w-[60%] mx-auto flex items-center p-2 rounded-full pl-7 mt-14">
+            <input type="text" placeholder="Search ..." class="search flex-grow outline-none text-lg">
+            <button
+                class="search-btn bg-[#e85d04] hover:bg-[#dc2f02] transition text-xl text-white px-4 py-3 rounded-full"><i
+                    class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="recipies"></div>
+    </div>
+</body>
+
+</html>
