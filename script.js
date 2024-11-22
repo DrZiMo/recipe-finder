@@ -1,8 +1,5 @@
 const API_URL = "https://www.themealdb.com/api/json/v1/1/search.php?";
 
-// f=b
-// s=Arrabiata
-
 const search = document.querySelector("#search-input");
 const xMark = document.querySelector(".xmark");
 const searchBtn = document.querySelector(".search-btn");
@@ -22,7 +19,6 @@ async function getInfoFromAPI() {
         let formattedTags = meal.strTags ? meal.strTags.replace(/,/g, ", ") : "No Tags";
         createRecipe(meal.strMealThumb, meal.strCategory, meal.strMeal, formattedTags, meal.strYoutube)
     });
-    // console.log(data.meals[0]);
 }
 
 // Creating the structure of the recipies
@@ -95,7 +91,7 @@ function createRecipe(poster, catagory, name, tags, videoLink) {
 async function searchRecipe(recipe) {
     xMark.classList.remove("hidden");
     recipeContainer.innerHTML = "";
-    const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${recipe}`)
+    const response = await fetch(`${API_URL}s=${recipe}`)
     const data = await response.json();
 
     if (data.meals) {
@@ -108,6 +104,7 @@ async function searchRecipe(recipe) {
     }
 }
 
+// Events
 window.addEventListener("load", getInfoFromAPI);
 searchBtn.addEventListener("click", () => {
     searchRecipe(search.value)
