@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="container w-[80%] mx-auto my-10">
+    <div class="w-[90%] mx-auto my-10">
         <div class="title text-5xl font-bold text-center text-[#e85d04]">Recipe Finder</div>
         <div class="search border w-[60%] mx-auto flex items-center p-2 rounded-full pl-7 mt-14">
             <input type="text" placeholder="Search ..." class="search flex-grow outline-none text-lg">
@@ -19,7 +19,32 @@
                 class="search-btn bg-[#e85d04] hover:bg-[#dc2f02] transition text-xl text-white px-4 py-3 rounded-full"><i
                     class="fa-solid fa-magnifying-glass"></i></button>
         </div>
-        <div class="recipies"></div>
+        <div class="divider w-full bg-gray-200 h-[1px] my-10"></div>
+        <div class="recipies grid grid-cols-3 gap-5">
+            <div class="recipe border border-[#e85d04] rounded-lg p-1">
+                <div class="poster">
+                    <img src="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg"
+                        class="rounded-tl-lg rounded-tr-lg">
+                </div>
+                <div class="info flex flex-col gap-1 mt-4 p-1">
+                    <div class="recipe-catagory bg-gray-400 text-gray-700 w-fit px-3 py-1 rounded-full">
+                        Vegetarian</div>
+                    <div class="recipe-name text-[#e85d04] text-2xl font-semibold">Spicy Arrabiata Penn</div>
+                    <div class="tags text-gray-400">Pasta,Curry</div>
+                    <div class="buttons flex justify-between mt-3">
+                        <a href="https://www.youtube.com/watch?v=1IszT_guI08" target="_blank">
+                            <button
+                                class="border border-gray-300 px-3 py-1 rounded-full text-gray-500 flex gap-2 items-center transition hover:bg-gray-200"><i
+                                    class="fa-regular fa-circle-play"></i> Watch
+                                video</button>
+                        </a>
+                        <button
+                            class="bg-[#e85d04] px-3 py-1 rounded-full text-white flex gap-2 items-center transition hover:bg-[#dc2f02]"><i
+                                class="fa-regular fa-circle-check"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
