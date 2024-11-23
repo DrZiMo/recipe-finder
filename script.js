@@ -55,16 +55,17 @@ function createRecipe(poster, catagory, name, tags, videoLink) {
     infoPart.append(recipeTags);
 
     const buttons = document.createElement("div");
-    buttons.classList.add("buttons", "flex", "justify-between", "mt-3");
+    buttons.classList.add("buttons", "flex", "flex-row", "md:flex-col", "2xl:flex-row", "gap-2", "justify-between", "mt-3");
     infoPart.append(buttons);
 
     const recipeVideoLink = document.createElement("a");
     recipeVideoLink.href = videoLink;
     recipeVideoLink.target = "_blank";
+    recipeVideoLink.classList.add("w-fit", "md:w-full");
     buttons.append(recipeVideoLink);
 
     const watchVideoBtn = document.createElement("button");
-    watchVideoBtn.classList.add("border", "border-gray-300", "px-3", "py-1", "rounded-full", "text-gray-500", "flex", "gap-2", "items-center", "transition", "hover:bg-gray-200");
+    watchVideoBtn.classList.add("border", "border-gray-300", "px-3", "py-1", "rounded-full", "text-gray-500", "flex", "gap-2", "items-center", "transition", "hover:bg-gray-200", "w-fit", "md:w-full");
     watchVideoBtn.innerHTML = "<i class='fa-regular fa-circle-play'></i> Watch video";
     recipeVideoLink.append(watchVideoBtn);
 
